@@ -1,8 +1,164 @@
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
 }
 body {
-	font-family: 'Spartan', sans-serif;
+  font-family: 'Spartan', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+:root {
+  --dark--magenta: hsl(300, 43%, 22%);
+  --soft--pink: hsl(333, 80%, 67%);
+  --dark--grayish--magenta: hsl(303, 10%, 53%);
+  --light--grayish--magenta: hsl(300, 24%, 96%);
+}
+
+.bg-image {
+  z-index: -1;
+  position: fixed;
+}
+
+.image-desktop {
+  display: none;
+}
+.image-mobile {
+  display: block;
+}
+
+.image-top {
+  top: 0;
+}
+.image-bottom {
+  bottom: 0;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 2;
+  padding: 1.2rem;
+  max-width: 70rem;
+  margin: auto;
+}
+
+.information-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.intro-section {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.intro-section h1 {
+  font-size: 28px;
+  padding: 0 1rem;
+  color: var(--dark--magenta);
+}
+
+.intro-section p {
+  color: var(--dark--grayish--magenta);
+}
+
+.rating-cards-section {
+  width: 100%;
+}
+
+.rating-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: var(--light--grayish--magenta);
+  color: var(--dark--magenta);
+  font-weight: 700;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.rating-stars {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.star {
+  margin: 0 0.25rem;
+}
+
+.testimonials-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-card {
+  background-color: var(--dark--magenta);
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 1rem 0;
+  height: 16rem;
+}
+
+.user-information {
+  display: flex;
+}
+
+.user-card p {
+  line-height: 1.5;
+}
+
+.circle {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #fff;
+  margin-right: 1.5rem;
+}
+
+.user-information-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.buyer {
+  color: var(--soft--pink);
+}
+
+@media (min-width: 376px) {
+  .image-desktop {
+    display: block;
+  }
+  .image-mobile {
+    display: none;
+  }
+  .information-section {
+    flex-direction: row;
+  }
+  .testimonials-section {
+    margin-top: 2rem;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .user-card {
+    margin: 0 1rem;
+  }
+  .user-card + .user-card {
+    margin-top: 1rem;
+  }
+  .user-card + .user-card + .user-card {
+    margin-top: 2rem;
+  }
 }
